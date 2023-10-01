@@ -1,0 +1,152 @@
+[
+    {
+       "category":"AC",
+       "title":"AC Repair and Service",
+       "desc":"At Urban Space, we provide comprehensive air conditioner services and repair to keep your home cool and comfortable all year long. Our team of experienced and certified technicians can handle any job, from routine maintenance to complex repairs. We understand that your AC is an important investment, and we are committed to providing you with the best possible service. We offer competitive rates and flexible scheduling to meet your needs. Contact us today to learn more about our AC services and repair.",
+       "img":"https://img.freepik.com/premium-photo/air-conditioner-service-indoors-air-conditioner-cleaning-technician-he-opened-front-cover-took-out-filters-washed-it-he-uniform-wearing-rubber-mask_208349-1339.jpg",
+       "services": [
+          {
+            "service_title":"AC cleaning (window)",   
+            "service_desc":"Intense pressure cleaning of indoor unit and basic cleaning of outdoor unit. Does not include foam.",    
+            "price":399,          
+            "isfixed": true 
+          },
+          {
+            "service_title":"AC cleaning (split)",   
+            "service_desc":"Intense pressure cleaning of indoor unit and basic cleaning of outdoor unit. Does not include foam.",    
+            "price":499,          
+            "isfixed": true 
+          },
+          {
+            "service_title":"AC repair (split/window)",   
+            "service_desc":"Detailed issue diagnosis with same day resolution. Visit & inspection charges of ₹299 will be adjusted in the final bill, If Urban Space repair services are availed.",    
+            "price":299,          
+            "isfixed": false 
+          },
+          {
+            "service_title":"AC Gas fill",   
+            "service_desc":"Thorough diagnosis, leak identification & fixing, gas refills to avoid leakages.",    
+            "price":2200,          
+            "isfixed": true 
+          },
+          {
+            "service_title":"AC installation",   
+            "service_desc":"Installation of both indoor & outdoor units. Procurement of spare parts(at extra cost)",    
+            "price":999,          
+            "isfixed": false
+          },
+          {
+            "service_title":"AC uninstallation",   
+            "service_desc":"Uninstallation of both indoor & outdoor units",    
+            "price":399,          
+            "isfixed": false 
+          }
+       ]   
+    },
+
+    {
+        "category":"Washing Machine",
+        "title":"Washing Machine Repair and Service",
+        "desc":"We understand that a broken washing machine can be a major inconvenience, we offer prompt and reliable service. We also offer competitive rates and a satisfaction guarantee. If you need washing machine services or repair, contact Urban Space today. We are here to help you get your washing machine back in working order quickly and affordably.",
+        "img":"https://st3.depositphotos.com/16122460/34719/i/450/depositphotos_347191100-stock-photo-professional-plumber-repairing-washing-machine.jpg",
+        "services": [
+           {
+             "service_title":"Washing Machine repair ",   
+             "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
+             "price":249,          
+             "isfixed": false     
+           },
+           {
+            "service_title":"Washing Machine installation",   
+            "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
+            "price":299,          
+            "isfixed": false      
+           }
+        ]   
+    },
+
+    {
+        "category":"Television",
+        "title":"Television Repair and Service",
+        "desc":"Are you looking for a high-quality and affordable TV repair and service? Urban Space TV service is your answer. Television is one of the most essential appliances in your day to day life. Urban Space is well-known for its rapid, cost-effective, and exceptional TV servicing. Our engineers will come directly to your home and troubleshoot your television to get it running smoothly again. In addition, if any spares needed to be replaced only the genuine spare parts will be used and complete the work in the least possible time, if needed and they will provide expertise, advice and support to prevent troubles in the future.",
+        "img":"https://media.istockphoto.com/id/832983526/photo/electrician-checking-television.jpg?s=612x612&w=0&k=20&c=cy0kefsswlabBndRp2-CnbZesSgSpEqclCyp5DBmtjc=",
+        "services": [
+           {
+             "service_title":"TV repair",   
+             "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
+             "price":249,          
+             "isfixed": false      
+           },
+           {
+            "service_title":"TV installation Wall Mount 24 ~ 43",   
+            "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
+            "price":349,          
+            "isfixed": true      
+          },
+          {
+            "service_title":"TV installation Wall Mount 43 ~ 65",   
+            "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
+            "price":550,          
+            "isfixed": true     
+          }
+        ]   
+    },
+
+    {
+        "category":"Refrigerator",
+        "title":"Refrigerator Repair and Service",
+        "desc":"At Urban Space, we understand how important your refrigerator is to your everyday life. That's why we offer a wide range of refrigerator services and repair options to keep your appliance running smoothly and efficiently. Our team of experienced and certified refrigerator technicians can diagnose and repair any problem, big or small. We offer same-day and next-day service appointments, so you never have to wait long to get your refrigerator back in working order. Whether you need a repair, a maintenance service, or simply need some advice on how to keep your refrigerator running at its best, Urban Space is here to help. Contact us today to learn more about our refrigerator services and repair options.",
+        "img":"https://st2.depositphotos.com/2249091/5553/i/450/depositphotos_55533327-stock-photo-handyman-during-fridge-repair.jpg",
+        "services": [
+           {
+             "service_title":"Refrigerator Single door repair",   
+             "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
+             "price":199,          
+             "isfixed": true     
+           },
+           {
+            "service_title":"Refrigerator Double door repair",   
+            "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
+            "price":299,          
+            "isfixed": true     
+          },
+          {
+            "service_title":"Refrigerator Side by side door repair",   
+            "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
+            "price":299,          
+            "isfixed": true      
+          }
+        ]   
+    },
+
+    {
+        "category":"Microwave",
+        "title":"Microwave Repair and Service",
+        "desc":"At Urban Space, we offer a comprehensive range of microwave services and repair, from basic troubleshooting to complex repairs. We have a team of experienced and qualified technicians who are experts in all major brands and models of microwaves. We understand that your microwave is an essential appliance in your home, so we offer fast and reliable service to get you back up and running as quickly as possible. We also offer competitive rates and a satisfaction guarantee on all of our work.",
+        "img":"https://st3.depositphotos.com/1177973/18302/i/450/depositphotos_183024554-stock-photo-young-man-repairing-microwave-oven.jpg",
+        "services": [
+           {
+             "service_title":"Microwave repair",   
+             "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
+             "price":199,          
+             "isfixed": true     
+           }
+        ]   
+    },
+
+    {
+        "category":"Water Purifier",
+        "title":"Water Purifier Repair and Service",
+        "desc":"We are committed to providing our customers with the highest quality water purifier services and repair. We understand that access to clean and safe water is essential for a healthy lifestyle, and we are here to help you to ensure that your water purifier is working properly and providing you with the best possible water quality. Contact us today to learn more about our water purifier services and repair.",
+        "img":"https://www.vblue.in/images/ro-water-purifier-installation.jpg",
+        "services": [
+           {
+             "service_title":"Water Purifier repair",   
+             "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
+             "price":249,          
+             "isfixed": true     
+           }
+        ]   
+    }
+
+]
