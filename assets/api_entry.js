@@ -1,14 +1,14 @@
 require("../database/connection")
 
-const Services = require("../database/service_model")
+const Review = require("../database/review_model")
 
-const service_api = require("./service_api.json")  // No need to write export in json file, we can directly require
+const review_api = require("./review_api.json")  // No need to write export in json file, we can directly require
 
 async function start(){
     try{
-        await Services.deleteMany() 
+        await Review.deleteMany() 
 
-        await Services.create(service_api)  
+        await Review.create(review_api)  
     }
     catch(err){
         console.log('Cannot create store data of API due to'+err);
