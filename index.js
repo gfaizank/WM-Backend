@@ -13,11 +13,12 @@ require("./database/connection")   // Database Connection
 
 const home_routes = require("./routes/homepage")
 const api_routes = require("./routes/apis")
+const client_routes = require("./routes/client_page")
 
 
 server.use('/', home_routes)
 server.use('/api', api_routes)
-
+server.use('/client', client_routes)
 
 
 
