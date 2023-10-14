@@ -40,12 +40,11 @@ async function subscribe(req, res) {
           html: mail
        }
   
-       const sentmail = transporter.sendMail(mailOptions, () => {
-          res.status(200).json( { response :"Subscribed"} )
-       })   
+       await transporter.sendMail(mailOptions)  
+       res.status(200).json( { "response" :"Subscribed"} )
    }
    catch(err){
-        res.status(404).json( { response :"Could not subscribed"} )
+        res.status(404).json( { "response" :"Could not subscribed"} )
    }
 }
 

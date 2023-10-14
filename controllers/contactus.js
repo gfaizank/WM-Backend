@@ -33,7 +33,7 @@ async function contactus(req, res) {
                {
                  Email: email,
                  Phone: phone
-            }    
+               }    
              ]
            }
          },
@@ -49,12 +49,11 @@ async function contactus(req, res) {
          html: mail
        }
   
-       const sentmail = transporter.sendMail(mailOptions, () => {
-          res.status(200).json( { response :"We will get back to you shortly"} )
-       })
+       await transporter.sendMail(mailOptions)
+       res.status(200).json({ "response": "We will get back to you shortly" })
    }
    catch(err){
-       res.status(404).json( { response :"Contact Details sending failed"} )
+       res.status(404).json( { "response" :"Contact Details sending failed"} )
    }
 }
 
