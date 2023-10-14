@@ -5,7 +5,7 @@ async function register(req,res){
         const {name,email,password,confirmpassword} = req.body
         const check = await Clients.findOne({email})
 
-        if(check){
+        if(!check){
             if(password === confirmpassword){
                 const user = new Clients({
                     name :name, 
