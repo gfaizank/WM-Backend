@@ -3,19 +3,23 @@ const Clients = require("../database/client_model")
 async function register(req,res){    
     try{
         const {name,email,password,confirmpassword} = req.body
+        const check = await Clients.findOne({email})
 
-        if(password === confirmpassword){
-            const user = new Clients({
-                name :name, 
-                email : email,                
-                password : password,
-                confirmpassword : confirmpassword
-            })
-
-            await user.save()
-            res.status(201).json(user)
+        if(check){
+            if(password === confirmpassword){
+                const user = new Clients({
+                    name :name, 
+                    email : email,                
+                    password : password,
+                    confirmpassword : confirmpassword
+                })
+    
+                await user.save()
+                res.status(201).json(user)
+            }
+            else res.status(404).json({"response":"Password does not matched"})
         }
-        else res.status(404).json({"response":"Password does not matched"})
+        else res.status(404).json({"response":"Email-ID already exist, Please Login"})   
     }
     catch(err){
         res.status(404).json({"response":`Cannot Register due to ${err}`})
