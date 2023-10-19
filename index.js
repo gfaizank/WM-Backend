@@ -3,11 +3,13 @@ require('dotenv').config()
 const express = require('express')
 const server = express()
 const port = process.env.PORT || 8000
-const cors = require("cors");
+const cors = require("cors");  
+const cookieParser = require('cookie-parser')
 
 server.use(cors());
 server.use(express.json())   
 server.use(express.urlencoded({extended:false})) 
+server.use(cookieParser())
 
 require("./database/connection")   // Database Connection
 

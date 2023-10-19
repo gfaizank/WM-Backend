@@ -1,4 +1,6 @@
 const Clients = require("../database/client_model")
+const jwt = require('jsonwebtoken')
+const bcrypt = require('bcryptjs')
 
 async function register(req,res){    
     try{
@@ -12,6 +14,15 @@ async function register(req,res){
                     email : email,                
                     password : password,
                     confirmpassword : confirmpassword
+                })
+
+                const token = await student.generatetoken()  //Creating Web Token for authentication
+
+
+                // Store JWT tokens in HTTP only Cookie in browser
+                res.cookie('webtoken', token, {
+                    expires: new Date(Date.now()+36000000),
+                    httpOnly:true
                 })
     
                 await user.save()
@@ -33,9 +44,19 @@ async function login(req,res){
         const user = await Clients.findOne({email})
 
         if(user){
-            if(user.password === password) res.status(200).json(user)
+            const isMatch = await bcrypt.compare(req.body.Pass,user.password)
 
-            else res.status(404).json({"response":"Invalid Password"})
+                if(isMatch){
+                    const token = await user.generatetoken()
+
+                    res.cookie('webtoken', token, {
+                        expires: new Date(Date.now()+300000),
+                        httpOnly:true
+                    })
+                    
+                    res.status(200).json(user)
+                } 
+                else res.status(404).json({"response":"Invalid Password"})
         }
 
         else res.status(404).json({"response":"Invalid Email-ID"})
