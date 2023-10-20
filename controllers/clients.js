@@ -16,7 +16,7 @@ async function register(req,res){
                     confirmpassword : confirmpassword
                 })
 
-                const token = await student.generatetoken()  //Creating Web Token for authentication
+                const token = await user.generatetoken()  //Creating Web Token for authentication
 
 
                 // Store JWT tokens in HTTP only Cookie in browser
@@ -44,7 +44,7 @@ async function login(req,res){
         const user = await Clients.findOne({email})
 
         if(user){
-            const isMatch = await bcrypt.compare(req.body.Pass,user.password)
+            const isMatch = await bcrypt.compare(password,user.password)
 
                 if(isMatch){
                     const token = await user.generatetoken()
@@ -53,7 +53,7 @@ async function login(req,res){
                         expires: new Date(Date.now()+300000),
                         httpOnly:true
                     })
-                    
+
                     res.status(200).json(user)
                 } 
                 else res.status(404).json({"response":"Invalid Password"})
@@ -66,6 +66,43 @@ async function login(req,res){
     }   
 }
 
+async function addtocart (req,res){
+    
+    const email = req.params.email;
+
+    // Data to be added or updated
+    const newServiceData = req.body
+
+    try {
+        const user = await Clients.findOne({ email });
+
+        if (user) {
+            // Check if the user already has the service data
+            const existingService = user.services.find(service => 
+                service.service_title === newServiceData.service_title
+            );
+
+            if (existingService) {
+                res.status(200).json({ message: 'Service already exists' });
+            } else {
+                // If the service doesn't exist, add it to the "services" array
+                user.services.push(newServiceData);
+            }
+
+            // Save the updated user
+            await user.save();
+
+            res.status(200).json({ message: 'Service data updated or added.' });
+        } else {
+            res.status(404).json({ message: 'User not found.' });
+        }
+    } catch (error) {
+        res.status(500).json({ error: 'Internal server error' });
+    }
+}
 
 
-module.exports = {register, login}
+
+
+
+module.exports = {register, login, addtocart}
