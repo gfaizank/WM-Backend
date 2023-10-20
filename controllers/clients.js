@@ -33,7 +33,7 @@ async function register(req,res){
         else res.status(404).json({"response":"Email-ID already exist, Please Login"})   
     }
     catch(err){
-        res.status(404).json({"response":`Cannot Register due to ${err}`})
+        res.status(500).json({"response":`Cannot Register due to ${err}`})
     }   
 }
 
@@ -62,41 +62,98 @@ async function login(req,res){
         else res.status(404).json({"response":"Invalid Email-ID"})
     }
     catch(err){
-        res.status(404).json({"response":`Cannot Login due to ${err}`})
+        res.status(500).json({"response":`Cannot Login due to ${err}`})
     }   
 }
 
 async function addtocart (req,res){
     
     const email = req.params.email;
-
-    // Data to be added or updated
-    const newServiceData = req.body
-
+    const newServiceData = req.body    
     try {
         const user = await Clients.findOne({ email });
 
-        if (user) {
+        if(user){
             // Check if the user already has the service data
             const existingService = user.services.find(service => 
                 service.service_title === newServiceData.service_title
             );
 
             if (existingService) {
-                res.status(200).json({ message: 'Service already exists' });
-            } else {
-                // If the service doesn't exist, add it to the "services" array
-                user.services.push(newServiceData);
-            }
+                existingService.service_desc = newServiceData.service_desc;
+                existingService.price = newServiceData.price;
+                existingService.isfixed = newServiceData.isfixed;
+                existingService.ispaid = newServiceData.ispaid;
+            } 
+            else user.services.push(newServiceData) 
 
-            // Save the updated user
             await user.save();
+            res.status(201).json({ message: 'Service data updated or added.' });
+        } 
+        else res.status(404).json({ message: 'User not found.' });
+    } 
+    catch (error) {
+        res.status(500).json({ error: 'Internal server error' });
+    }
+}
 
-            res.status(200).json({ message: 'Service data updated or added.' });
-        } else {
-            res.status(404).json({ message: 'User not found.' });
-        }
-    } catch (error) {
+
+async function removefromcart (req,res){
+    
+    const email = req.params.email;
+    try {
+        const user = await Clients.findOne({ email });
+
+        if(user){
+            // Check if the user already has the service data
+            const existingService = user.services.find(service => 
+                service.service_title === req.body.service_title
+            );
+           console.log(existingService)
+            if (existingService) {
+                user.services.pop(existingService)
+                await user.save();
+                res.status(201).json({ message: 'Service data deleted.' });
+            } 
+            else res.status(404).json({ message: 'Service data does not exist.' });     
+        } 
+        else res.status(404).json({ message: 'User not found.' });
+    } 
+    catch (error) {
+        res.status(500).json({ error: 'Internal server error' });
+    }
+}
+
+async function unpaidservices (req,res){
+    const email = req.params.email;
+    try {
+        const user = await Clients.findOne({ email });
+
+        if(user){
+           const unpaidServices = user.services.filter(service => !service.ispaid);
+           console.log(unpaidServices)
+           res.status(200).json(unpaidServices);     
+        } 
+        else res.status(404).json({ message: 'User not found.' });
+    } 
+    catch (error) {
+        res.status(500).json({ error: 'Internal server error' });
+    }
+}
+
+async function paidservices (req,res){
+    const email = req.params.email;
+    try {
+        const user = await Clients.findOne({ email });
+
+        if(user){
+           const paidServices = user.services.filter(service => service.ispaid);
+           console.log(paidServices)
+           res.status(200).json(paidServices);     
+        } 
+        else res.status(404).json({ message: 'User not found.' });
+    } 
+    catch (error) {
         res.status(500).json({ error: 'Internal server error' });
     }
 }
@@ -105,4 +162,4 @@ async function addtocart (req,res){
 
 
 
-module.exports = {register, login, addtocart}
+module.exports = {register, login, addtocart, removefromcart, unpaidservices, paidservices}
