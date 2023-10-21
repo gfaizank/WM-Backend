@@ -81,6 +81,7 @@ async function addtocart (req,res){
 
             if (existingService) {
                 existingService.service_desc = newServiceData.service_desc;
+                existingService.service_img = newServiceData.service_img;
                 existingService.price = newServiceData.price;
                 existingService.isfixed = newServiceData.isfixed;
                 existingService.ispaid = newServiceData.ispaid;
@@ -109,7 +110,6 @@ async function removefromcart (req,res){
             const existingService = user.services.find(service => 
                 service.service_title === req.body.service_title
             );
-           console.log(existingService)
             if (existingService) {
                 user.services.pop(existingService)
                 await user.save();

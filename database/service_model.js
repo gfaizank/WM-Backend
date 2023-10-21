@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const serviceSchema = new mongoose.Schema({
   service_title: {
     type: String,
+    required: true,
     trim: true
   },
   service_desc: {
