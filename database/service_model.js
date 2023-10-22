@@ -4,6 +4,7 @@ const serviceSchema = new mongoose.Schema({
   service_title: {
     type: String,
     required: true,
+    unique: true,
     trim: true
   },
   service_desc: {

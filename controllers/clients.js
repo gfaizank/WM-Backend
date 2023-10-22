@@ -66,6 +66,43 @@ async function login(req,res){
     }   
 }
 
+async function getlogin(req,res){     
+    try{
+        if(req.cookies.webtoken){
+            const verify = await jwt.verify(req.cookies.webtoken,`tokenforsecuritypurpose`)
+            if(verify){
+                const user = await Clients.findOne({value:req.cookies.webtoken})
+                res.status(200).json(user)
+            }
+            else res.status(404).json({"response":"Unverified"})
+        } 
+        else res.status(404).json({"response":"Token does not exist"})
+    }
+    catch(err){
+        res.status(500).json({ error: 'Internal server error' })
+    }   
+}
+
+async function logout(req,res){     
+    try{
+        if(req.cookies.webtoken){
+            const user = await Clients.findOne({token:req.cookies.webtoken}) 
+            if(user){
+                // user.tokens = user.tokens.filter((current_token)=>{
+                //     return current_token != req.cookies.webtoken    // Logout from single device
+                // })
+                user.tokens=[]   // Logout from all devices
+                await user.save() 
+                res.clearCookie('webtoken')  
+                res.status(200).json({"response":"Successfull Logout"})
+            }   
+        }   
+    }
+    catch(err){
+        res.status(500).json({ error: 'Internal server error' });
+    }   
+}
+
 async function addtocart (req,res){
     
     const email = req.params.email;
@@ -79,17 +116,12 @@ async function addtocart (req,res){
                 service.service_title === newServiceData.service_title
             );
 
-            if (existingService) {
-                existingService.service_desc = newServiceData.service_desc;
-                existingService.service_img = newServiceData.service_img;
-                existingService.price = newServiceData.price;
-                existingService.isfixed = newServiceData.isfixed;
-                existingService.ispaid = newServiceData.ispaid;
-            } 
-            else user.services.push(newServiceData) 
-
-            await user.save();
-            res.status(201).json({ message: 'Service data updated or added.' });
+            if (existingService) res.status(404).json({ message: 'Service already exists' }) 
+            else{
+                user.services.push(newServiceData) 
+                await user.save();
+                res.status(201).json({ message: 'Service data updated or added.' });
+            }   
         } 
         else res.status(404).json({ message: 'User not found.' });
     } 
@@ -162,4 +194,4 @@ async function paidservices (req,res){
 
 
 
-module.exports = {register, login, addtocart, removefromcart, unpaidservices, paidservices}
+module.exports = {register, login, getlogin, logout, addtocart, removefromcart, unpaidservices, paidservices}

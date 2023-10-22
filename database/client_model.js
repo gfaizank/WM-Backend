@@ -24,7 +24,10 @@ const serviceSchema = new mongoose.Schema({
     type: String,
     trim: true
   },
-  price: Number,
+  price: {
+    type: Number, 
+    required: true
+  },
   isfixed: Boolean,
   ispaid: Boolean
 });
