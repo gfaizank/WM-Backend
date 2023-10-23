@@ -21,8 +21,10 @@ async function register(req,res){
 
                 // Store JWT tokens in HTTP only Cookie in browser
                 res.cookie('webtoken', token, {
-                    expires: new Date(Date.now()+36000000),
-                    httpOnly:true
+                    expires: new Date(Date.now() + 3600000),
+                    httpOnly: true,
+                    sameSite: 'None', // Add this line
+                    secure: true,     // Ensure this is true for HTTPS
                 })
     
                 await user.save()
@@ -50,8 +52,10 @@ async function login(req,res){
                     const token = await user.generatetoken()
 
                     res.cookie('webtoken', token, {
-                        expires: new Date(Date.now()+300000),
-                        httpOnly:true
+                        expires: new Date(Date.now() + 3600000),
+                        httpOnly: true,
+                        sameSite: 'None', // Add this line
+                        secure: true,     // Ensure this is true for HTTPS
                     })
 
                     res.status(200).json(user)
