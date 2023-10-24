@@ -160,16 +160,12 @@ async function removefromcart (req,res){
     }
 }
 
-async function unpaidservices (req,res){
+async function incart_services (req,res){
     const email = req.params.email;
     try {
         const user = await Clients.findOne({ email });
 
-        if(user){
-           const unpaidServices = user.services.filter(service => !service.ispaid);
-           console.log(unpaidServices)
-           res.status(200).json(unpaidServices);     
-        } 
+        if(user) res.status(200).json(user.services)
         else res.status(404).json({ message: 'User not found.' });
     } 
     catch (error) {
@@ -177,25 +173,25 @@ async function unpaidservices (req,res){
     }
 }
 
-async function paidservices (req,res){
-    const email = req.params.email;
-    try {
-        const user = await Clients.findOne({ email });
+// async function paidservices (req,res){
+//     const email = req.params.email;
+//     try {
+//         const user = await Clients.findOne({ email });
 
-        if(user){
-           const paidServices = user.services.filter(service => service.ispaid);
-           console.log(paidServices)
-           res.status(200).json(paidServices);     
-        } 
-        else res.status(404).json({ message: 'User not found.' });
-    } 
-    catch (error) {
-        res.status(500).json({ error: 'Internal server error' });
-    }
-}
-
-
+//         if(user){
+//            const paidServices = user.services.filter(service => service.ispaid);
+//            console.log(paidServices)
+//            res.status(200).json(paidServices);     
+//         } 
+//         else res.status(404).json({ message: 'User not found.' });
+//     } 
+//     catch (error) {
+//         res.status(500).json({ error: 'Internal server error' });
+//     }
+// }
 
 
 
-module.exports = {register, login, getlogin, logout, addtocart, removefromcart, unpaidservices, paidservices}
+
+
+module.exports = {register, login, getlogin, logout, addtocart, removefromcart, incart_services}

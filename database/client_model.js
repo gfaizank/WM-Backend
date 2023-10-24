@@ -9,7 +9,7 @@ const tokenSchema = new mongoose.Schema({
   }
 });
 
-const serviceSchema = new mongoose.Schema({
+const incart_serviceSchema = new mongoose.Schema({
   service_title: {
     type: String,
     required: true,
@@ -28,8 +28,7 @@ const serviceSchema = new mongoose.Schema({
     type: Number, 
     required: true
   },
-  isfixed: Boolean,
-  ispaid: Boolean
+  isfixed: Boolean
 });
 
 const userSchema = new mongoose.Schema({
@@ -54,7 +53,7 @@ const userSchema = new mongoose.Schema({
   },
   otp: Number,
   tokens: [tokenSchema],
-  services: [serviceSchema]
+  services: [incart_serviceSchema]
 });
 
 userSchema.methods.generatetoken = async function(){
