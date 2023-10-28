@@ -23,8 +23,8 @@ async function register(req,res){
                 res.cookie('webtoken', token, {
                     expires: new Date(Date.now() + 3600000),
                     httpOnly: true,
-                    sameSite: 'None', // Add this line
-                    secure: true,     // Ensure this is true for HTTPS
+                    sameSite: 'None', 
+                    secure: true,     
                 })
     
                 await user.save()
@@ -50,12 +50,13 @@ async function login(req,res){
 
                 if(isMatch){
                     const token = await user.generatetoken()
+                    console.log(token)
 
                     res.cookie('webtoken', token, {
                         expires: new Date(Date.now() + 3600000),
                         httpOnly: true,
-                        sameSite: 'None', // Add this line
-                        secure: true,     // Ensure this is true for HTTPS
+                        sameSite: 'None', 
+                        secure: true,    
                     })
 
                     res.status(200).json(user)
@@ -70,12 +71,14 @@ async function login(req,res){
     }   
 }
 
-async function getlogin(req,res){     
+async function getlogin(req,res){    
     try{
         if(req.cookies.webtoken){
             const verify = await jwt.verify(req.cookies.webtoken,`tokenforsecuritypurpose`)
             if(verify){
-                const user = await Clients.findOne({value:req.cookies.webtoken})
+                const user = await Clients.findOne({ 'tokens.value': req.cookies.webtoken }).catch((error) => {
+                    console.error('Error querying the database:', error);
+                });
                 res.status(200).json(user)
             }
             else res.status(404).json({"response":"Unverified"})
@@ -90,7 +93,7 @@ async function getlogin(req,res){
 async function logout(req,res){     
     try{
         if(req.cookies.webtoken){
-            const user = await Clients.findOne({token:req.cookies.webtoken}) 
+            const user = await Clients.findOne({ 'tokens.value': req.cookies.webtoken }) 
             if(user){
                 // user.tokens = user.tokens.filter((current_token)=>{
                 //     return current_token != req.cookies.webtoken    // Logout from single device
