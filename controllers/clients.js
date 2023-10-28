@@ -30,12 +30,12 @@ async function register(req,res){
                 await user.save()
                 res.status(201).json(user)
             }
-            else res.status(404).json({"response":"Password does not matched"})
+            else res.status(404).json({"response":"Password does not matched","status":"404"})
         }
-        else res.status(404).json({"response":"Email-ID already exist, Please Login"})   
+        else res.status(404).json({"response":"Email-ID already exist, Please Login","status":"404"})   
     }
     catch(err){
-        res.status(500).json({"response":`Cannot Register due to ${err}`})
+        res.status(500).json({"response":`Cannot Register due to ${err}`,"status":"500"})
     }   
 }
 
@@ -60,13 +60,13 @@ async function login(req,res){
 
                     res.status(200).json(user)
                 } 
-                else res.status(404).json({"response":"Invalid Password"})
+                else res.status(404).json({"response":"Invalid Password","status":"404"})
         }
 
-        else res.status(404).json({"response":"Invalid Email-ID"})
+        else res.status(404).json({"response":"Invalid Email-ID","status":"404"})
     }
     catch(err){
-        res.status(500).json({"response":`Cannot Login due to ${err}`})
+        res.status(500).json({"response":`Cannot Login due to ${err}`,"status":"500"})
     }   
 }
 
@@ -80,10 +80,10 @@ async function getlogin(req,res){
             }
             else res.status(404).json({"response":"Unverified"})
         } 
-        else res.status(404).json({"response":"Token does not exist"})
+        else res.status(404).json({"response":"Token does not exist","status":"404"})
     }
     catch(err){
-        res.status(500).json({ error: 'Internal server error' })
+        res.status(500).json({ error: 'Internal server error',"status":"500" })
     }   
 }
 
@@ -103,7 +103,7 @@ async function logout(req,res){
         }   
     }
     catch(err){
-        res.status(500).json({ error: 'Internal server error' });
+        res.status(500).json({ error: 'Internal server error' ,"status":"500"});
     }   
 }
 
