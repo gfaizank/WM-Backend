@@ -8,42 +8,42 @@
           {
             "service_title":"AC cleaning (window)",   
             "service_desc":"Intense pressure cleaning of indoor unit and basic cleaning of outdoor unit. Does not include foam.",    
-            "service_img":"https://drive.google.com/uc?id=1-IGMpr5BF0K_pBL1KQdiwUOpJGr4qRxe&export=download",
+            "service_img":"https://airaceheatingandcooling.com/wp-content/uploads/2022/05/Get-a-brush--1024x683.jpeg.webp",
             "price":399,          
             "isfixed": true 
           },
           {
             "service_title":"AC cleaning (split)",   
             "service_desc":"Intense pressure cleaning of indoor unit and basic cleaning of outdoor unit. Does not include foam.",    
-            "service_img":"https://drive.google.com/uc?id=1jPMGRAOuk7BX976AaPiQhEbZOsBgonVp&export=download",
+            "service_img":"https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1080,h=1186,fit=crop/AR07nN3LOwTkVo0q/technician-service-removing-air-filter-air-conditioner-cleaning_35076-3618-YrD6GpZZVvs5ZOJv.webp",
             "price":499,          
             "isfixed": true 
           },
           {
             "service_title":"AC repair (split/window)",   
             "service_desc":"Detailed issue diagnosis with same day resolution. Visit & inspection charges of ₹299 will be adjusted in the final bill, If Urban Space repair services are availed.",    
-            "service_img":"https://drive.google.com/uc?id=1BxqtJe1DdJ_1NF2g_nrorz3vufxKcOJI&export=download",
+            "service_img":"https://www.naughtonmechanical.com/wp-content/uploads/2021/06/AdobeStock_241534624-280x226.jpg",
             "price":299,          
             "isfixed": false 
           },
           {
             "service_title":"AC Gas fill",   
             "service_desc":"Thorough diagnosis, leak identification & fixing, gas refills to avoid leakages.",    
-            "service_img":"https://drive.google.com/uc?id=1MICm-QXkKUkZhokeA3h-tP9gocQOTRk2&export=download",
+            "service_img":"https://www.onehourairftworth.com/wp-content/uploads/2019/08/7-Reasons-to-Call-Professional-Service-for-Your-Air-Conditioner-_-Air-Conditioning-Service-in-Fort-Worth-TX-1024x683.jpg",
             "price":2200,          
             "isfixed": true 
           },
           {
             "service_title":"AC installation",   
             "service_desc":"Installation of both indoor & outdoor units. Procurement of spare parts(at extra cost)",    
-            "service_img":"https://drive.google.com/uc?id=1gJ4MUMkwjsBx3L4fP6TI5QO5LcrTY0u6&export=download",
+            "service_img":"https://cdn-bbiph.nitrocdn.com/hVFywUXDRQGVxHhlmukyqckWQWIdYwCQ/assets/images/optimized/rev-d7714db/www.ambientedge.com/wp-content/uploads/2019/02/green-valley-air-conditioning-service-and-maintenance-company-1024x683.jpg",
             "price":999,          
             "isfixed": false
           },
           {
             "service_title":"AC uninstallation",   
             "service_desc":"Uninstallation of both indoor & outdoor units",    
-            "service_img":"https://drive.google.com/uc?id=1mY29m1doR5eCewZYemnkS7wPb--IyW4u&export=download",
+            "service_img":"https://media.istockphoto.com/id/1308375294/photo/technician-repairing-air-conditioner.jpg?s=612x612&w=0&k=20&c=BZIkJ9qarD6s94uWQauL4q88Ft65kp7xENsUBMrIfjU=",
             "price":399,          
             "isfixed": false 
           }
@@ -59,14 +59,14 @@
            {
              "service_title":"Washing Machine repair ",   
              "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
-             "service_img":"https://drive.google.com/uc?id=17d4tWS5axDfsrwlLjrjDRFl-6PfRpR_G&export=download",
+             "service_img":"https://webtk.sfastservices.com/blogimg/washing-machine-repairman-near-me.jpg",
              "price":249,          
              "isfixed": false     
            },
            {
             "service_title":"Washing Machine installation",   
             "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
-            "service_img":"https://drive.google.com/uc?id=1RE2FgB2ElYf6DxKY_TYi9v248owoQzIQ&export=download",
+            "service_img":"https://www.maahomeappliances.com/wp-content/uploads/2024/01/washing-machine-installation.png",
             "price":299,          
             "isfixed": false      
            }
@@ -82,21 +82,21 @@
            {
              "service_title":"TV repair",   
              "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
-             "service_img":"https://drive.google.com/uc?id=1i_eqAFNMCCeWKJeKvBTqngiJfpo7qAVP&export=download",
+             "service_img":"https://media.istockphoto.com/id/832983526/photo/electrician-checking-television.jpg?s=612x612&w=0&k=20&c=cy0kefsswlabBndRp2-CnbZesSgSpEqclCyp5DBmtjc=",
              "price":249,          
              "isfixed": false      
            },
            {
             "service_title":"TV installation Wall Mount 24 ~ 43",   
             "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
-            "service_img":"https://drive.google.com/uc?id=1mGNVYDLtGytG8yZz7vcw6e0c3R5mabOc&export=download",
+            "service_img":"https://www.tvaerialsstoke.com/wp-content/uploads/2022/10/tv-wall-mounting-hero.jpg",
             "price":349,          
             "isfixed": true      
           },
           {
             "service_title":"TV installation Wall Mount 43 ~ 65",   
             "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
-            "service_img":"https://drive.google.com/uc?id=1mGNVYDLtGytG8yZz7vcw6e0c3R5mabOc&export=download",
+            "service_img":"https://www.tvaerialsstoke.com/wp-content/uploads/2022/10/tv-wall-mounting-hero.jpg",
             "price":550,          
             "isfixed": true     
           }
@@ -112,21 +112,21 @@
            {
              "service_title":"Refrigerator Single door repair",   
              "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
-             "service_img":"https://drive.google.com/uc?id=1zgaQXM19F5W1QRHrIqyNIDWiTPfcQE0P&export=download",
+             "service_img":"https://media.istockphoto.com/id/591415644/photo/handyman-repairing-refrigerator-at-home.jpg?s=612x612&w=0&k=20&c=PmL8ZgkW6bvJ02273f3qjHM_-8_dJhza-uGOuMwS4Vs=",
              "price":199,          
              "isfixed": true     
            },
            {
             "service_title":"Refrigerator Double door repair",   
             "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
-            "service_img":"https://drive.google.com/uc?id=1VDX6Qp2McUhHqDzwU5Ew-YI0Tepft-cn&export=download",
+            "service_img":"https://st2.depositphotos.com/1010613/8037/i/450/depositphotos_80378056-stock-photo-housewife-looking-at-worker-repairing.jpg",
             "price":299,          
             "isfixed": true     
           },
           {
             "service_title":"Refrigerator Side by side door repair",   
             "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
-            "service_img":"https://drive.google.com/uc?id=1QtWVPdcbiz9FQLVDUUoZoq9ahYhc4lOu&export=download",
+            "service_img":"https://www.macoolcomforts.com/wp-content/uploads/2021/09/refrigerator-repair-services.jpg",
             "price":299,          
             "isfixed": true      
           }
@@ -142,7 +142,7 @@
            {
              "service_title":"Microwave repair",   
              "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
-             "service_img":"https://drive.google.com/uc?id=1J5CtfhuSSn4hzkBx13JmNEfHxKRZjp5o&export=download",
+             "service_img":"https://repaircentrejum.in/wp-content/uploads/2021/01/20200227143544.jpeg",
              "price":199,          
              "isfixed": true     
            }
@@ -158,7 +158,7 @@
            {
              "service_title":"Water Purifier repair",   
              "service_desc":"Includes full diagnosis, spare part charges extra as per rate card. Visit & inspection charges will be adjusted in the final bill, If Urban Space repair services are availed.",    
-             "service_img":"https://drive.google.com/uc?id=14MYKnLHSkUmJ6zI62Ur8vcRa9Pa45yvB&export=download",
+             "service_img":"https://www.localramu.com/assets/images/WP2.png",
              "price":249,          
              "isfixed": true     
            }
