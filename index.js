@@ -8,6 +8,7 @@ const cookieParser = require('cookie-parser')
 
 const corsOptions = {
   origin : true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
   credentials : true
 }
 server.use(cors(corsOptions));
